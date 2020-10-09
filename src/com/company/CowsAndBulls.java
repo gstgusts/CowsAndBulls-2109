@@ -99,4 +99,8 @@ public class CowsAndBulls {
     private int getRandomNumber(int min, int max) {
         return (int) ((Math.random() * (max - min)) + min);
     }
+
+    public List<CowsAndBullsResult> getResults() {
+        return results;
+    }
 }
