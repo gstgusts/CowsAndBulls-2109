@@ -40,14 +40,21 @@ public class CowsAndBulls {
             if(numberToGuessArray[i].equals(numberArray[i])) {
                 ++bulls;
                 numberToGuessArray[i] = "";
+                numberArray[i] = "";
                 continue;
-            } else {
-                for (int j = 0; j < numberToGuessArray.length; j++) {
-                    if(numberToGuessArray[j].equals(numberArray[i])) {
-                        ++cows;
-                        numberToGuessArray[j] = "";
-                        continue;
-                    }
+            }
+        }
+
+        for (int i = 0; i < numberArray.length; i++) {
+            if(numberArray[i].equals("")) {
+                continue;
+            }
+
+            for (int j = 0; j < numberToGuessArray.length; j++) {
+                if(numberToGuessArray[j].equals(numberArray[i])) {
+                    ++cows;
+                    numberToGuessArray[j] = "";
+                    break;
                 }
             }
         }

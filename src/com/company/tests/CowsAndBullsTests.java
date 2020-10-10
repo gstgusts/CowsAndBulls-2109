@@ -72,4 +72,13 @@ public class CowsAndBullsTests {
         assertEquals(2, result.getBulls());
         assertEquals(0, result.getCows());
     }
+
+    @Test
+    public void guess_if_2_bull_2787_2777() {
+        var cbl = new CowsAndBulls(2787);
+        var result = cbl.guess(2777);
+
+        assertEquals(3, result.getBulls());
+        assertEquals(0, result.getCows());
+    }
 }
